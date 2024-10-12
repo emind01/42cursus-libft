@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:47:06 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 18:11:21 by muduran          ###   ########.fr       */
+/*   Created: 2024/10/12 12:49:18 by muduran           #+#    #+#             */
+/*   Updated: 2024/10/12 13:13:01 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*str;
-	size_t			i;
+	int	i;
 
-	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
+	i = ft_strlen((char *)s);
+	while (i >= 0)
 	{
-		str[i] = (unsigned int)c;
-		i++;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (b);
+	return (0);
 }
-
 /*
+#include <stdio.h>
 int main()
 {
-	long int src[] = {12, 11, 1, 3};
-	ft_memset(src, 10, 4);
-	printf("%ld", src[0]);
-	
+	printf("%s", ft_strrchr("Merhaba", 97));
 }
 */

@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:47:06 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 18:11:21 by muduran          ###   ########.fr       */
+/*   Created: 2024/10/12 13:05:03 by muduran           #+#    #+#             */
+/*   Updated: 2024/10/12 13:12:23 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*str;
-	size_t			i;
+	size_t	i;
 
 	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
+	while (i < n && s1[i] && s2[i])
 	{
-		str[i] = (unsigned int)c;
+		if (s1[i] != s2[i])
+			return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 		i++;
 	}
-	return (b);
+	return (0);
 }
-
-/*
-int main()
-{
-	long int src[] = {12, 11, 1, 3};
-	ft_memset(src, 10, 4);
-	printf("%ld", src[0]);
-	
-}
-*/

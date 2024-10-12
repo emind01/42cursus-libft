@@ -1,38 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:47:06 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 18:11:21 by muduran          ###   ########.fr       */
+/*   Created: 2024/10/12 08:55:30 by muduran           #+#    #+#             */
+/*   Updated: 2024/10/12 09:56:01 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*str;
-	size_t			i;
+	unsigned char	*dst1;
+	unsigned char	*src1;
 
-	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
+	dst1 = (unsigned char *)dst;
+	src1 = (unsigned char *)src;
+	if (dst == src || len == 0)
+		return (dst);
+	if (dst1 < src1)
+		return (ft_memcpy(dst, src, len));
+	else
 	{
-		str[i] = (unsigned int)c;
-		i++;
+		while (len--)
+			dst1[len] = src1[len];
 	}
-	return (b);
+	return (dst);
 }
-
 /*
 int main()
 {
-	long int src[] = {12, 11, 1, 3};
-	ft_memset(src, 10, 4);
-	printf("%ld", src[0]);
-	
+    char dst[9] = "123456789";
+    char src[4] = "abcd";
+	ft_memmove(dst, src, 4);
+	printf("%s",dst);
 }
 */

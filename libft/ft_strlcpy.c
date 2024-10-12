@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 17:47:06 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 18:11:21 by muduran          ###   ########.fr       */
+/*   Created: 2024/10/12 09:59:40 by muduran           #+#    #+#             */
+/*   Updated: 2024/10/12 10:32:54 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned char	*str;
-	size_t			i;
+	size_t	i;
 
 	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
+	if (dstsize > 0)
 	{
-		str[i] = (unsigned int)c;
-		i++;
+		while (src[i] && i < dstsize -1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	return (b);
+	return (ft_strlen(src));
 }
-
 /*
+#include <stdio.h>
 int main()
 {
-	long int src[] = {12, 11, 1, 3};
-	ft_memset(src, 10, 4);
-	printf("%ld", src[0]);
-	
+	char dst[] = "aliali";
+	char src[] = "muduran";
+	ft_strlcpy(dst, src, 7);
+	printf("%s", dst);
 }
 */
