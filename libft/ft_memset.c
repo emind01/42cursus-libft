@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:47:06 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 18:11:21 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/13 12:12:49 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	str = (unsigned char *)b;
 	while (i < len)
 	{
-		str[i] = (unsigned int)c;
+		str[i] = c;
 		i++;
 	}
 	return (b);

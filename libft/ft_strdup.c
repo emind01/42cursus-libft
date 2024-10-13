@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/12 08:55:30 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/13 17:08:02 by muduran          ###   ########.fr       */
+/*   Created: 2024/10/13 14:16:05 by muduran           #+#    #+#             */
+/*   Updated: 2024/10/13 14:37:03 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char	*dst1;
-	unsigned char	*src1;
+	size_t	len;
+	char	*s_c;
 
-	dst1 = (unsigned char *)dst;
-	src1 = (unsigned char *)src;
-	if (dst == src || len == 0)
-		return (dst);
-	if (dst1 < src1)
-		return (ft_memcpy(dst, src, len));
-	else
-	{
-		while (len--)
-			dst1[len] = src1[len];
-	}
-	return (dst);
+	len = ft_strlen(s1);
+	s_c = malloc(len + 1);
+	if (!(s_c))
+		return (NULL);
+	ft_memcpy(s_c, s1, len + 1);
+	return (s_c);
 }
 /*
+#include<stdio.h>
+#include<string.h>
 int main()
 {
-    char dst[9] = "123456789";
-    char src[4] = "abcd";
-	ft_memmove(dst, src, 4);
-	printf("%s",dst);
+    char s[] = "Emin Duran";
+	
+    char* t1 = ft_strdup(source); 
+	char* t2 = strdup(source); 
+
+	printf("%p   %s   %p\n", &s, t1, ft_strdup(s));
+    printf("%s   %p"  , t2, strdup(s));
+    return 0;
 }
 */
