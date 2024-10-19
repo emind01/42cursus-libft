@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 14:41:27 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/14 20:31:52 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/19 17:29:55 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 
 	sublen = ft_strlen(s);
+	if (!s)
+		return (NULL);
 	if (start > sublen)
-		len = 0;
+		return (ft_strdup(""));
 	else if (len > (sublen - start))
 		len = sublen - start;
-	substr = malloc(len + 1);
+	substr = (char *) malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
 	i = 0;
@@ -38,7 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*
 int main()
-{
+{ 
 	char s[] = "abcemindef";
 	unsigned int start = 3;
 	size_t len = 4;
