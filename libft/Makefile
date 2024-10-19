@@ -4,19 +4,19 @@ SOURCES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_st
 		ft_strchr.c ft_strrchr.c ft_memmove.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 		ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c \
 		ft_itoa.c ft_striteri.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJS = $(SOURCES:.c=.o)
-#BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstdelone.c ft_lstlast.c ft_lstadd_back.c ft_lstiter.c ft_lstclear.c ft_lstmap.c
-# BONUS_OBJS = $(BONUS_SOURCES:.c=.o)
-CC = cc
+OBJS = ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_strlen.o \
+ft_memset.o ft_bzero.o ft_memcpy.o ft_strlcpy.o ft_strlcat.o ft_toupper.o ft_tolower.o \
+ft_strchr.o ft_strrchr.o ft_memmove.o ft_strncmp.o ft_memchr.o ft_memcmp.o ft_strnstr.o \
+ft_atoi.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o \
+ft_itoa.o ft_striteri.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
+
+
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar -rc $(NAME) $(OBJS)
-
-#bonus: $(BONUS_OBJS)
-#	ar -rc $(NAME) $(BONUS_OBJS)
+$(NAME):  $(OBJS)
+	ar -r $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
@@ -25,4 +25,9 @@ fclean: clean
 	$(RM) $(NAME)
 	
 re: fclean all
+
+emin: $(NAME)
+	@$(CC) libft.a main.c
+	@./a.out
+
 
