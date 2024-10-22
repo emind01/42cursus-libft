@@ -6,11 +6,9 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 12:14:17 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/13 13:48:39 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:53:44 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

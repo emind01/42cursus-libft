@@ -6,11 +6,9 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:27:56 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 12:37:52 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:56:40 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_toupper(int c)
 {

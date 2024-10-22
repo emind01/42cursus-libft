@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 16:19:30 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/13 11:44:11 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:59:10 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char hs[] = "abceminde";
-	char n[] = "emin";
-	
-	printf("%s\n", ft_strnstr(hs, n, ft_strlen(hs)));
-	printf("%s\n", strnstr(hs, n, ft_strlen(hs)));
-	return 0;
-}
-*/

@@ -6,11 +6,9 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:38:09 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/08 11:38:10 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:54:34 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -18,12 +16,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int main() {
-	
-    printf("%d", ft_isprint(211));
-    return 0;
-}
-*/

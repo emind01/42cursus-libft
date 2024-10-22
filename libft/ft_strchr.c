@@ -6,11 +6,9 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:40:13 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 14:25:53 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:45:04 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

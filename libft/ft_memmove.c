@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 08:55:30 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/13 17:08:02 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:55:01 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main()
-{
-    char dst[9] = "123456789";
-    char src[4] = "abcd";
-	ft_memmove(dst, src, 4);
-	printf("%s",dst);
-}
-*/

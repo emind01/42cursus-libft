@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 14:41:27 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/19 17:29:55 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:56:31 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
-
-/*
-int main()
-{ 
-	char s[] = "abcemindef";
-	unsigned int start = 3;
-	size_t len = 4;
-
-	printf("%s", ft_substr(s, start, len));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 13:36:05 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/19 14:27:42 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:48:06 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int main () 
-{
-   const char str[] = ".Tutorialspoint";
-   const char ch = '.';
-   char *r2;
-   char *ret;
-   
-   r2 = ft_memchr(str, ch, strlen(str));
-   printf("String after |%c| is - |%s|\n", ch, r2);
-   
-   ret = memchr(str, ch, strlen(str));
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   return(0);
-}
-*/

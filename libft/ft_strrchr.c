@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 12:49:18 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 13:13:01 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 14:45:32 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	printf("%s", ft_strrchr("Merhaba", 97));
-}
-*/

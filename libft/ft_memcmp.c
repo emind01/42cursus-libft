@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 15:56:35 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 16:17:57 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:54:49 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,22 +28,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-   int arr1[] = {1, 2, 3, 4, 5};
-   int arr2[] = {1, 2, 3, 4, 6};
-
-   int result = ft_memcmp(arr1, arr2, 16);
-
-   if (result == 0) {
-       printf("Arrays are equal\n");
-   } else {
-       printf("Arrays are not equal\n");
-   }
-    return 0;
-}
-*/

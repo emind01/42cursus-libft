@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 09:59:40 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/12 10:32:54 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/22 15:55:55 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char dst[] = "aliali";
-	char src[] = "muduran";
-	ft_strlcpy(dst, src, 7);
-	printf("%s", dst);
-}
-*/

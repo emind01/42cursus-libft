@@ -6,7 +6,7 @@
 /*   By: muduran <muduran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 22:46:33 by muduran           #+#    #+#             */
-/*   Updated: 2024/10/15 03:50:04 by muduran          ###   ########.fr       */
+/*   Updated: 2024/10/23 00:59:41 by muduran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	word_len(const char *s, char c)
 	return (i);
 }
 
-char	**free_all(char **result)
+static	char	**free_all(char **result)
 {
 	int	i;
 
@@ -81,15 +81,3 @@ char	**ft_split(char const *s, char c)
 	ret_val[++a] = NULL;
 	return (ret_val);
 }
-
-/*
-int main()
-{
-	char *str = "Fatih furkan,mustafa";
-	char ayirici = ',';
-	char **sonuc = ft_split(str,ayirici);
-
- 	printf("%s\n",(char *)sonuc[0]);
- 	printf("%s",(char *)sonuc[1]);
- }
- */
